@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Demo/Demo/Views/MainView.axaml" value="Demo/Demo.Desktop/Demo.Desktop.csproj" />
+        <entry key="Demo/Demo/Views/MainWindow.axaml" value="Demo/Demo.Desktop/Demo.Desktop.csproj" />
+        <entry key="Demo/Demo/Views/PokedexList.axaml" value="Demo/Demo.Desktop/Demo.Desktop.csproj" />
+        <entry key="Demo/Demo/Views/PokedexListView.axaml" value="Demo/Demo.Desktop/Demo.Desktop.csproj" />
+        <entry key="Demo/Demo/Views/PokemonStatsView.axaml" value="Demo/Demo.Desktop/Demo.Desktop.csproj" />
+        <entry key="Demo/Demo/Views/PokemonView.axaml" value="Demo/Demo.Desktop/Demo.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

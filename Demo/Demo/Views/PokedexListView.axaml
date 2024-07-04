@@ -1,0 +1,110 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Demo.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="640"
+             x:Class="Demo.Views.PokedexListView"
+             x:DataType="vm:PokedexListViewModel">
+    <DockPanel
+        Background="#DC0A2D">
+        <StackPanel
+            DockPanel.Dock="Top">
+            <StackPanel
+                Margin="12, 12, 24, 12"
+                Spacing="16"
+                Orientation="Horizontal">
+                <Image
+                    Height="24"
+                    Width="24"
+                    Source="../drawalbe/Pokeball.png"/>
+                <TextBlock
+                    Foreground="White"
+                    FontWeight="Bold"
+                    FontSize="24"
+                    FontFamily="Poppins"
+                    Text="Pokédex"/>
+            </StackPanel>
+        
+            <DockPanel
+                Margin="10">
+                <Border
+                    DockPanel.Dock="Right"
+                    Width="32"
+                    Height="32"
+                    HorizontalAlignment="Left"
+                    CornerRadius="16"
+                    Background="White"
+                    BoxShadow="inset 5 5 10 0 DarkGray">
+                    <Button
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        BorderBrush="Transparent"
+                        Background="Transparent">
+                        <Button.Flyout>
+                            <Flyout>
+                                <StackPanel
+                                    Background="#DC0A2D">
+                                    <TextBlock
+                                        Foreground="White"
+                                        FontWeight="Black"
+                                        FontSize="12"
+                                        HorizontalAlignment="Center"
+                                        Margin="10"
+                                        Text="Sort by:"/>
+                                    <StackPanel
+                                        Background="White">
+                                        <RadioButton 
+                                            GroupName="First Group"
+                                            Content="Number"/>
+                                        <RadioButton 
+                                            GroupName="First Group"
+                                            Content="Name"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                        <Image Source="../drawalbe/tag.png"/>
+                    </Button>
+                </Border>
+                
+                <Border
+                    Margin="0 0 20 0"
+                    Height="32"
+                    HorizontalAlignment="Stretch"
+                    Padding="10"
+                    CornerRadius="16"
+                    Background="White"
+                    BoxShadow="inset 5 5 10 0 DarkGray">
+                    <DockPanel>
+                        <Image 
+                            DockPanel.Dock="Left"
+                            Source="../drawalbe/lupa.png"/>
+                        <TextBox 
+                            Foreground="Black"
+                            BorderBrush="Transparent"
+                            Background="Transparent"
+                            Watermark="Search"/>
+                    </DockPanel>
+                </Border>
+            </DockPanel>
+        </StackPanel>
+        <Border
+            Padding="10"
+            CornerRadius="16"
+            Margin="10"
+            Background="White"
+            BoxShadow="inset 5 5 10 0 DarkGray">
+            <ListBox 
+                SelectedItem="{Binding PokemonViewModel}"
+                Background="Transparent"
+                ItemsSource="{Binding Pokemons}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox> 
+        </Border>
+    </DockPanel>
+</UserControl>
